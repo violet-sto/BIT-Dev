@@ -80,7 +80,7 @@ class MultiwayBiasNetwork(nn.Module):
             mask1, mask2 = torch.triu(mask1.fill_(1.0)), torch.tril(mask2.fill_(1.0), -1)
             # graph_attn_bias = y1[0] * mask1[None, None, :, :] + y1[0] * mask2[None, None, :, :]
             graph_attn_bias_upper = torch.cat([y1[0][:, :, :self.split_position, :self.split_position], y2[0][:, :, :self.split_position, self.split_position:]], dim=3)
-            graph_attn_bias_bot = torch.cat([y1[0][:, :, self.split_position:, :self.split_position], y2[0][:, :, self.split_position:, self.split_position:]], dim=3)
+            graph_attn_bias_bot = torch.cat([y2[0][:, :, self.split_position:, :self.split_position], y1[0][:, :, self.split_position:, self.split_position:]], dim=3)
             graph_attn_bias = torch.cat([graph_attn_bias_upper, graph_attn_bias_bot],
                                         dim=2)
 

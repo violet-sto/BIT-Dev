@@ -183,7 +183,7 @@ class GraphPretrainingTask(FairseqTask):
     """
     Sentence (or sentence pair) prediction (classification or regression) task.
     """
-
+    
     def __init__(self, cfg):
         super().__init__(cfg)
         self.input_modality = self.cfg.input_modality.split(',')
@@ -202,7 +202,7 @@ class GraphPretrainingTask(FairseqTask):
 
         if 'complex' in self.input_modality:
             self.complex_dataset = PocketLigandPairDataset(
-                os.path.join(self.cfg.data_path, 'complex/BioLiP2-1'), view='atom')
+                os.path.join(self.cfg.data_path, 'complex/BioLiP2'), view='atom')
             train_size = int(0.9 * len(self.complex_dataset))
             val_size = len(self.complex_dataset) - train_size
             self.complex_train_dataset, self.complex_val_dataset = random_split(self.complex_dataset, [train_size, val_size])

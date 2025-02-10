@@ -401,7 +401,7 @@ class BiTEncoder(nn.Module):
         else:
             return inner_states, noise_output
 
-class BiTPDBbind(nn.Module):
+class BiTEncoderPDBbind(nn.Module):
 
     def __init__(
         self,

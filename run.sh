@@ -25,21 +25,15 @@ export noise_scale=0.2                             # noise scale
 export mode_prob="0.2,0.2,0.6"                      # mode distribution for {2D+3D, 2D, 3D}
 #export modality="ligand,pocket,complex"             # input modality
 export modality="ligand"             # input modality
-export mode_ffn="false"
+export mode_ffn="true"
 export mode_2d="true"
 export mode_3d="true"
-#export dataset_name="PCQM4M-&-PbCmQC-7M"           # 小分子数据集
-#export dataset_name="PCQM4M-&-PbCmQC-79M"
-#export dataset_name="PbCmQC-79M"
 export dataset_name="PCQM4M-LSC-V2-3D"
 export add_3d="true"
 export num_3d_bias_kernel=128                       # number of Gaussian Basis kernels
 export update_freq=4
 
 export use_wandb="false"
-#export WANDB_NAME="123-mode-32gpu"
-#export wandb_project="BIT-kdd-ablation"
-#conda activate Transformer-M
 
 bash train.sh
 

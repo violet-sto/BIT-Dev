@@ -2,8 +2,8 @@ ulimit -c unlimited
 
 [ -z "${lr}" ] && lr=2e-4
 [ -z "${end_lr}" ] && end_lr=1e-9
-[ -z "${warmup_steps}" ] && warmup_steps=12000
-[ -z "${total_steps}" ] && total_steps=200000
+[ -z "${warmup_steps}" ] && warmup_steps=150000
+[ -z "${total_steps}" ] && total_steps=7000
 [ -z "${layers}" ] && layers=12
 [ -z "${complexffn_start_layer}" ] && complexffn_start_layer=10
 [ -z "${hidden_size}" ] && hidden_size=768
@@ -184,7 +184,7 @@ export OMP_NUM_THREADS=1
 echo $n_gpu
 echo $mode_ffn
 torchrun --nproc_per_node=$n_gpu --master_port=$MASTER_PORT $ddp_options train.py \
-	--user-dir $(realpath ./Transformer-M) \
+	--user-dir $(realpath ./BIT) \
 	--data-path $data_path \
 	--num-workers 1 --ddp-backend=legacy_ddp \
 	--dataset-name $dataset_name \
