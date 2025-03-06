@@ -39,7 +39,7 @@ pip install --upgrade tensorboardX==2.5.1
 ## Usage
 
 ### Datasets
-The raw data of ligands, pockets and complexes can be downloaded in [download link](http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz), [download link](https://www.rcsb.org) and [download link](https://yanglab.qd.sdu.edu.cn/Q-BioLiP).
+The raw data of ligands, pockets and complexes can be downloaded in [download link](http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz), [download link](https://www.rcsb.org) and [download link](https://yanglab.qd.sdu.edu.cn/Q-BioLiP). Besides, the processed data can be can be downloaded in [download link](https://zenodo.org/records/14975647), [download link](https://zenodo.org/records/14975679) and [download link](https://zenodo.org/records/14974173)
 
 ### Training
 
