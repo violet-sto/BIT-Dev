@@ -125,3 +125,18 @@ bash train.sh
 ```
 
 Our model is trained on 64 NVIDIA Tesla V100 GPUs (32GB).
+
+### Checkpoints
+
+| Model | File Size | Update Date  | Download Link                                            |
+| ----- | --------- | ------------ | -------------------------------------------------------- |
+| ligand-pocket-complex-2d3d-multiway   | 786MB     | Aug 14, 2025 |https://zenodo.org/records/16874914 |
+
+
+```shell
+# create paths to checkpoints for evaluation
+
+# download the above model weights to ./
+mkdir -p logs/ligand-pocket-complex-2d3d-multiway
+mv checkpoint_last.pt logs/ligand-pocket-complex-2d3d-multiway/
+```
