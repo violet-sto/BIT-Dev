@@ -140,3 +140,17 @@ Our model is trained on 64 NVIDIA Tesla V100 GPUs (32GB).
 mkdir -p logs/ligand-pocket-complex-2d3d-multiway
 mv checkpoint_last.pt logs/ligand-pocket-complex-2d3d-multiway/
 ```
+
+### Downstream tasks
+
+```shell
+# PDBBind
+bash finetune_pdbbind.sh
+
+# DUD-E
+bash finetune_dude.sh
+
+# MoleculeNet
+bash finetune_moleculenet.sh
+```
+
